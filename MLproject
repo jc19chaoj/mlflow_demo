@@ -1,0 +1,13 @@
+name: MLflow demo
+
+conda_env: conda.yml
+
+entry_points: 
+    main:
+        parameters:
+            batch_size: {type: int, default: 32}
+            epochs: {type: int, default: 10}
+        command: "python train1.py --batch_size={batch_size} --epochs={epochs}"
+
+
+
